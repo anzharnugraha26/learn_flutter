@@ -1,9 +1,8 @@
-import 'dart:ui';
-
-import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:neumorphism/screens/home_page.dart';
+import 'package:neumorphism/screens/login_page.dart';
+import 'package:neumorphism/screens/main_layout.dart';
+import 'package:neumorphism/screens/register_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,11 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return MaterialApp(
+      title: 'Futuristic UI',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/login': (context) => const LoginPage(),
+        '/register': (context) => const RegisterPage(),
+        '/main_layout': (context) => const MainLayout()
+      },
     );
   }
 }
-
