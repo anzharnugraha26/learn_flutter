@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_app_ui/pages/home_page.dart';
+import 'package:health_app_ui/pages/schedule_page.dart';
 import 'package:health_app_ui/utils/colors.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -14,7 +15,7 @@ class _MainPageState extends State<MainPage> {
   int selectedIndex = 0;
   final List pages = [
     HomePage(),
-    Scaffold(),
+    SchedulePage(),
     Scaffold(),
     Scaffold(),
   ];
