@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_app_ui/widgets/doctor_profile.dart';
+import 'package:health_app_ui/widgets/health_needs.dart';
+import 'package:health_app_ui/widgets/nearby_doctor.dart';
 import 'package:iconsax/iconsax.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -72,7 +75,22 @@ class _HomePageState extends State<HomePage> {
           Text(
             'Health Needs',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          )
+          ),
+          SizedBox(
+            height: 18,
+          ),
+          HealthNeeds(),
+          SizedBox(
+            height: 18,
+          ),
+          Text(
+            'Nearby Doctor',
+            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 18,
+          ),
+          NearbyDoctor()
         ],
       ),
     );
